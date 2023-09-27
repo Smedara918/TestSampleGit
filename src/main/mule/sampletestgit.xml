@@ -11,6 +11,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="sampletestgitFlow" doc:id="9eada319-9b37-4b84-a409-4f5fc25a2833" >
 		<http:listener doc:name="Listener" doc:id="5ea133d4-b3a0-470d-b008-d4146ea8a71e" config-ref="HTTP_Listener_config" path="/sampletest"/>
 		<logger level="INFO" doc:name="Logger" doc:id="861aac5c-69e3-4546-8f41-33ef194baa0a" message="SampleGitTest"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="749eafa5-030f-4ebe-bab8-debf17de4d38" />
 		<ee:transform doc:name="Transform Message" doc:id="bd560855-eb7b-4888-bfad-0483d7c91a85" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
